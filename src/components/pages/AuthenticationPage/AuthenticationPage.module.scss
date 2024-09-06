@@ -1,0 +1,100 @@
+$form-bg-color: #f9f9fb;
+$form-border-color: #e0e0e0;
+$primary-color: #0073e6;
+$text-color: #333;
+$input-bg-color: #fff;
+$input-border-color: #ccc;
+$input-focus-color: $primary-color;
+$border-radius: 8px;
+$transition-time: 0.3s;
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $form-bg-color;
+
+  .form {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: $border-radius;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    text-align: center;
+    border: 1px solid $form-border-color;
+
+    fieldset {
+      border: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    legend {
+      font-size: 1.5rem;
+      color: $text-color;
+      margin-bottom: 1.5rem;
+      font-weight: 600;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+      text-align: left;
+
+      label {
+        display: block;
+        margin-bottom: 0.5rem;
+        font-size: 0.9rem;
+        color: $text-color;
+        font-weight: 500;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        font-size: 1rem;
+        border-radius: $border-radius;
+        border: 1px solid $input-border-color;
+        background-color: $input-bg-color;
+        transition:
+          border-color $transition-time,
+          box-shadow $transition-time;
+
+        &:focus {
+          border-color: $input-focus-color;
+          box-shadow: 0 0 0 3px rgba($input-focus-color, 0.2);
+          outline: none;
+        }
+      }
+    }
+
+    .submit-btn {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: $primary-color;
+      color: #fff;
+      font-size: 1rem;
+      font-weight: 600;
+      border-radius: $border-radius;
+      border: none;
+      cursor: pointer;
+      transition: background-color $transition-time;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+      }
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 3px rgba($primary-color, 0.3);
+      }
+    }
+
+    .message {
+      margin-top: 1rem;
+      color: $primary-color;
+      font-size: 1rem;
+    }
+  }
+}
