@@ -109,6 +109,8 @@ const AuthenticationPage: React.FC = () => {
 						/>
 					</div>
 
+					<a href="#" className={styles['forgot-password-link']}>Забыли пароль?</a>
+
 					<button type="submit" className={styles['submit-btn']}>
 						Войти
 					</button>

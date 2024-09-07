@@ -1,18 +1,12 @@
-import { Suspense } from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { BrowserRouter } from 'react-router-dom';
 import '../index.scss';
-import AuthenticationPage from './pages/AuthenticationPage/AuthenticationPage.async';
+import AppRouter from './router/AppRouter';
 
 function App() {
   return (
-    <div className="App">
-      <Link to='/'></Link>
-      <Suspense fallback={<div>Loading...</div>}>
-        <Routes>
-          <Route path={'/'} element={<AuthenticationPage />} />
-        </Routes>
-      </Suspense>
-    </div>
+    <BrowserRouter>
+      <AppRouter />
+    </BrowserRouter>
   );
 }
 
